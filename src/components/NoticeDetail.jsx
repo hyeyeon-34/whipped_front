@@ -11,7 +11,7 @@ const NoticeDetail = () => {
   useEffect(() => {
     const fetchNotice = async () => {
       try {
-        const response = await axios.get(`https://whippedb4.hyee34.site/community_detail/${write_number}`);
+        const response = await axios.get(`https://whippedbehind.hyee34.site/community_detail/${write_number}`);
         setNotice(response.data);
       } catch (error) {
         console.error('Error fetching notice:', error);

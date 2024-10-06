@@ -18,7 +18,7 @@ const DiyItem = () => {
     const dispatch = useDispatch();
     const authData = useSelector((state) => state.auth.authData);
   useEffect(() => {
-    axios.get(`https://whippedb4.hyee34.site/get_product`).then((response) => {
+    axios.get(`https://whippedbehind.hyee34.site/get_product`).then((response) => {
       const items = response.data;
       setDiy(items)
 
@@ -44,7 +44,7 @@ const DiyItem = () => {
 const checkDiyInCart = async (userId, productId, selectedOptions) => {
   try {
     // 장바구니에서 모든 아이템을 가져오기
-    const response = await axios.get(`https://whippedb4.hyee34.site/get_cart/${userId}`);
+    const response = await axios.get(`https://whippedbehind.hyee34.site/get_cart/${userId}`);
     const { diyItems } = response.data;
 
     // selectedOptions를 문자열로 변환
@@ -123,7 +123,7 @@ const checkDiyInCart = async (userId, productId, selectedOptions) => {
                 
                 const result = extractSecondWords(selectedOptions);
                 await axios.post(
-                    `https://whippedb4.hyee34.site/update_diy_quantity/${userId}`,
+                    `https://whippedbehind.hyee34.site/update_diy_quantity/${userId}`,
                     {
                         quantity: newQuantity,  
                         selected_options: result, 
@@ -171,7 +171,7 @@ const checkDiyInCart = async (userId, productId, selectedOptions) => {
         };
 
         try {
-            await axios.post(`https://whippedb4.hyee34.site/add_Diyitem/${userId}`, cartItem, { 
+            await axios.post(`https://whippedbehind.hyee34.site/add_Diyitem/${userId}`, cartItem, { 
                 headers: { 'Content-Type': 'application/json' }
             });
             alert('장바구니에 추가되었습니다!');
