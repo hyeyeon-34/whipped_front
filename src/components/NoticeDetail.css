@@ -1,0 +1,66 @@
+/* 전체 컨테이너 */
+.notice-detail-container {
+    background-color: rgb(246, 246, 242);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    padding-top:120px
+  }
+  
+  /* 제목 스타일 */
+  .notice-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #aab89d;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* 메타 정보 */
+  .notice-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .notice-meta p {
+    margin: 0;
+  }
+  
+  /* 본문 내용 */
+  .notice-body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .notice-detail-container {
+      padding: 1rem;
+    }
+  
+    .notice-title {
+      font-size: 1.8rem;
+    }
+  
+    .notice-meta {
+      font-size: 0.8rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .notice-body {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
