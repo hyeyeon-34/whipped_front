@@ -14,7 +14,7 @@ WORKDIR /app
 COPY package.json .
 
 
-
+RUN node --max-old-space-size=4096 $(which npm) install
 
 # 패키지 설치
 RUN npm install
